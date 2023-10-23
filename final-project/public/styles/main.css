@@ -25,3 +25,25 @@ button {
     margin: 2px;
     display: contents;
 }
+
+ul > button {
+    background-color: transparent;
+    border-width: 0px;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 10px;
+}
+
+#menu{
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 50px;
+}
+
+/* #options{
+    text-align: right;
+} */
+.navbar div{
+    text-align: right;
+    margin-top: 20px;
+}
