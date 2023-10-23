@@ -1,12 +1,12 @@
 body {
-    background: #BBAADD;
+    background: #BBBBFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 * {
-    color:#660099;
+    color:#2222BB;
 }
 
 button {
