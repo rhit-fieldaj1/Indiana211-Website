@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 * {
     color:#2222BB;
     justify-content: center;
@@ -27,6 +28,51 @@ button {
     margin: 2px;
     display: contents;
 }
+
+button i {
+    color: white;
+}
+
+body > .navbar {
+    align-self: stretch;
+    width: 100%;
+}
+
+
+ul > button {
+    background-color: transparent;
+    border-width: 0px;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 10px;
+}
+
+#menu{
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+}
+
+/* #options{
+    text-align: right;
+} */
+#searchBar{
+    position: absolute;
+    text-align: right;
+    top: 6%;
+    right: 4%;
+}
+
+#options{
+    position: absolute;
+    right: 4%;
+    top: 13%;
+}
+
 .zip {
     display: flex;
     flex-direction: column;
