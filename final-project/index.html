@@ -3,15 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Symbols+Outlined">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css' integrity='sha512-x7JROg1bfo6rXdDIz+IcAR4/bI/DQZOwuIlLFE3fHcDKBhwrMhZv8XrccrmI6OBTxRX/kwDZ0PIUUbP2lNc5Cw==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href="public/styles/main.css">
     <title>Final Project</title>
 </head>
 <body style="background-color:lightblue">
-    <div class="navbar" style="background-color:rgb(59, 59, 197);">
-        <button><img src=""></button>
-        <center><button><img src="numbers.png" style="height: 50px; width: 50px;"></button></center>
-        <button><img src=""> 23</button>
-        <button style="right: 100%;"><img src=""> hi</button>
+    <div class="navbar navbar-expand-md d-flex justify-content-between" style="background-color:rgb(59, 59, 197);">
+    
+        <div class="d-flex">
+            <button id="menuButton" type="button" class="btn" data-bs-toggle="collapse" data-bs-target="#navigationMenu">
+                <i class="material-symbols-outlined">menu</i>
+            </button>
+            <button id="homeButton" type="button" class="btn">
+                <i class="material-symbols-outlined">home</i>
+            </button>
+        </div>
+        
+        <div class="col-6 text-center">
+            <button><img src="numbers.png" style="height: 50px; width: 50px;"></button>
+        </div>
+    
+       
+        <div></div>
     </div>
+    
+
+    <div class="container collapse" id="navigationMenu">
+        <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed" id="menu-phone">Dial 2･1･1 or (866) 211-9966</li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed" id="menu-findHelp">FIND HELP / BUSCAR AYUDA</li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed" id="menu-dataDash">Indiana 211 Data Dashboard</li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed" id="menu-about">About Us</li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed" id="menu-serviceProviders">Service Providers</li>
+        </ul>
+    </div>
+
     <center><img src="logo.png" style="text-align:center;"></center>
     <p style="text-align: center;">Get Connected, Get Help!<br>
         Indiana 2･1･1 provides services<br>
@@ -20,13 +49,35 @@
          their local communities, <br>
          and more!<br>
         Please call 2･1･1 or select Find <br>
-        Help Near Me to receive <br>
+        Help Near Me to r eceive <br>
         assistance.
         </p>
     <ul style="text-align: center;">
-        <button>Find Help Near Me</button>
-        <button>Ayuda Cerca de Mi</button>
-        <button>Other Languages</button>
+        <button class="btn btn-primary">Find Help Near Me</button>
+        <button class="btn btn-primary">Ayuda Cerca de Mi</button>
+        <button class="btn btn-primary">Other Languages</button>
     </ul>
+
+    <!--Scripts-->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/10.5.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.5.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.5.0/firebase-performance-compat.js"></script>
+     <!-- 
+       initialize the SDK after all desired features are loaded, set useEmulator to false
+       to avoid connecting the SDK to running emulators.
+     -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js' integrity='sha512-ToL6UYWePxjhDQKNioSi4AyJ5KkRxY+F1+Fi7Jgh0Hp5Kk2/s8FD7zusJDdonfe5B00Qw+B8taXxF6CFLnqNCw==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js' integrity='sha512-rXm6RiYDlz+aZC/ht75tGzeAmCg4gVfBA6Be5s5uENSahiXkgwEy10J2Cc+dxUAW4lRRQYbS5pugMOqBrs8ksw==' crossorigin='anonymous'></script>
+    <script src="public/scripts/main.js"></script>
 </body>
 </html>

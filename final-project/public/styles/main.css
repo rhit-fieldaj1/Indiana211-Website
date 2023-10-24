@@ -25,3 +25,11 @@ button {
     margin: 2px;
     display: contents;
 }
+
+button i {
+    color: white;
+}
+
+body > .navbar {
+    align-self: stretch; /* Makes the navbar span the full width */
+}
