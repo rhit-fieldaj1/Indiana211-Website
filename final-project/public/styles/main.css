@@ -7,6 +7,11 @@ body {
 }
 * {
     color:#2222BB;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -32,4 +37,35 @@ button i {
 
 body > .navbar {
     align-self: stretch; /* Makes the navbar span the full width */
+}
+
+
+ul > button {
+    background-color: transparent;
+    border-width: 0px;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 10px;
+}
+
+#menu{
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 50px;
+}
+
+/* #options{
+    text-align: right;
+} */
+#searchBar{
+    position: absolute;
+    text-align: right;
+    top: 6%;
+    right: 4%;
+}
+
+#options{
+    position: absolute;
+    right: 4%;
+    top: 13%;
 }
