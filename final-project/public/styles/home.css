@@ -36,7 +36,7 @@ button i {
 }
 
 body > .navbar {
-    align-self: stretch; /* Makes the navbar span the full width */
+    align-self: stretch;
 }
 
 
