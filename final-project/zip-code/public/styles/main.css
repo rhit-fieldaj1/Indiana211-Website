@@ -7,6 +7,10 @@ body {
 }
 * {
     color:#2222BB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
