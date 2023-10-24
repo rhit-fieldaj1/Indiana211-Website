@@ -7,6 +7,8 @@ body {
 }
 * {
     color:#2222BB;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
