@@ -8,9 +8,6 @@ body {
 
 * {
     color:#2222BB;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -54,6 +51,10 @@ ul > button {
     text-align: left;
     margin-left: 25px;
     margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
 }
 
 /* #options{
@@ -70,6 +71,13 @@ ul > button {
     position: absolute;
     right: 4%;
     top: 13%;
+}
+
+.zip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 

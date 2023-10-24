@@ -7,10 +7,6 @@ body {
 }
 * {
     color:#2222BB;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 button {
@@ -28,4 +24,10 @@ button {
 .action {
     margin: 2px;
     display: contents;
+}
+.zip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
