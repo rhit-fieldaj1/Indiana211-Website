@@ -43,7 +43,15 @@ ul > button {
 /* #options{
     text-align: right;
 } */
-.navbar div{
+#searchBar{
+    position: absolute;
     text-align: right;
-    margin-top: 20px;
+    top: 6%;
+    right: 4%;
+}
+
+#options{
+    position: absolute;
+    right: 4%;
+    top: 13%;
 }
