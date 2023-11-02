@@ -1,0 +1,84 @@
+body {
+    background: #9999EE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    color:#2222BB;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.actions {
+    margin: 10px 40px 10px 40px;
+    text-align: center;
+}
+.action {
+    margin: 2px;
+    display: contents;
+}
+
+a i {
+    color: white;
+}
+
+body > .navbar {
+    align-self: stretch;
+    width: 100%;
+}
+
+
+ul > button {
+    background-color: transparent;
+    border-width: 0px;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 10px;
+}
+
+#menu{
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+}
+
+/* #options{
+    text-align: right;
+} */
+#searchBar{
+    position: absolute;
+    text-align: right;
+    top: 6%;
+    right: 4%;
+}
+
+#options{
+    position: absolute;
+    right: 4%;
+    top: 13%;
+}
+
+.zip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-chunk {
+    text-align: center;
+}
