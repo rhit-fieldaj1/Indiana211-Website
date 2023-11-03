@@ -79,3 +79,11 @@ ul > button {
     justify-content: center;
     align-items: center;
 }
+
+#countyDropdown {
+    margin-bottom: 5vh;
+}
+
+h1 {
+    margin: 5vh;
+}
