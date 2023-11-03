@@ -14,12 +14,12 @@
         integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=='
         crossorigin='anonymous' />
     <link rel='stylesheet' href="styles/home.css">
-    <title>Final Project</title>
+    <title>Indiana 211</title>
 </head>
 
-<body>
+<body style="background-color:lightblue">
 
-    <nav class="navbar navbar-expand-md d-flex justify-content-between" style="background-color:#005191;">
+    <nav class="navbar navbar-expand-md d-flex justify-content-between" style="background-color:rgb(59, 59, 197);">
         <div>
             <div class="d-flex">
                 <a id="menuButton" type="button" class="btn" data-bs-toggle="collapse"
@@ -31,12 +31,12 @@
                 </a>
             </div>
     
-            <!-- <div class="col-6 text-center">
+            <div class="col-6 text-center">
                 <button><img src="images/numbers.png" style="height: 50px; width: 50px;"></button>
-            </div> -->
+            </div>
     
     
-            
+            <div class></div>
         </div>
         
     </nav>
@@ -58,22 +58,34 @@
         </ul>
     </div>
 
-    <center><img src="images/logo.png" style="text-align:center;"></center>
-    <p style="text-align: center;">Get Connected, Get Help!<br>
-        Indiana 2･1･1 provides services<br>
-        for Hoosiers looking for <br>
-        housing, food, to contribute to <br>
-        their local communities, <br>
-        and more!<br>
-        Please call 2･1･1 or select Find <br>
-        Help Near Me to r eceive <br>
-        assistance.
-    </p>
-    <ul class="zip" style="text-align: center;">
-        <a href="zipCode.html"><button type="button" class="btn btn-primary">Find Help Near Me</button></a>
-        <a href="zipCode.html"><button type="button" class="btn btn-primary">Buscar Ayuda Cerca de Mí</button></a>
-        <a href=""><button type="button" class="btn btn-primary">Other Languages ･ Otros Idiomas</button></a>
-    </ul>
+
+    <div class="container-fluid justify-content-center">
+
+        <div class="container d-flex flex-column align-items-center justify-content-center">
+            <h2 class="display-5">Search for Resources Near</h2>
+            <h2 class="display-5"><strong>47803</strong></h2>
+        </div>
+
+        <div class="container-fluid justify-content-center">
+            <div class="row">
+                <div class="col-4">
+                    <input type="text" class="form-control" id="resourceSearch" placeholder="Search">
+                </div>
+                <div class="col-2">
+                    <button class="material-symbols-outlined">filter_list</button>
+                </div>
+            </div>
+        </div>
+        
+
+        
+
+
+
+    </div>
+
+
+    
 
     <!--Scripts-->
     <!-- update the version number as needed -->
@@ -99,7 +111,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js'
         integrity='sha512-kZKnID21//xaFiEISBXk6V1AdFCPOIpHhuEdBMprlAHdb0ICnvgSLsb89DAixlLJDuPyvNR+hN3lPvsFNn5XLg=='
         crossorigin='anonymous'></script>
-    <script src="scripts/home.js"></script>
+    <script src="scripts/resources.js"></script>
 </body>
 
 </html>

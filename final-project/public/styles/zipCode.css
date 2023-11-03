@@ -1,5 +1,5 @@
 body {
-    background: #9999EE;
+    background: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,7 +7,7 @@ body {
 }
 
 * {
-    color:#2222BB;
+    color:#005191;
     justify-content: center;
     align-items: center;
 }
