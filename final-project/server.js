@@ -7,15 +7,24 @@ app.use(express.json());
 app.use(express.static('public'));
 const resourcesFilePath = './final-project/public/resources.json';
 
+let cachedResources = null;
+
 async function readResources() {
+    if (cachedResources) {
+        return cachedResources;
+    }
+
     try {
         const data = await fs.readFile(resourcesFilePath, 'utf-8');
-        return JSON.parse(data);
+        const resources = JSON.parse(data);
+        cachedResources = resources;
+        return resources;
     } catch (error) {
         console.error('Error fetching resources: ', error);
         return [];
     }
 }
+
 
 const port = 3030; 
 app.listen(port, () => {
