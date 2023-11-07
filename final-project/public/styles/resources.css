@@ -9,7 +9,6 @@ body {
 * {
     color:#005191;
     justify-content: center;
-    align-items: center;
 }
 button {
     cursor: pointer;
@@ -119,3 +118,9 @@ nav {
     border-width: 0;
     
 }
+
+/* .card {
+    align-items: start;
+} */
+
+

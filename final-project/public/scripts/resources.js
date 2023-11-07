@@ -101,6 +101,54 @@ display = function (resource, userCoordinates, radius) {
     let d = distance(lat1, lon1, lat2, lon2);
     if(isNaN(d) || d > radius) {return}
 
-    document.getElementById("resourceContainer").innerHTML += `<p>${resource.agency_name} ${resource.taxonomy_code} Distance: ${d}</p>`;
+    document.getElementById("resourceContainer").innerHTML += `
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-10 title">
+            <strong>${resource.agency_name}</strong>
+          </div>
+          <div class="col">
+            <i class="material-symbols-outlined">info</i>
+          </div>
+        </div>
+      </div>
+      <div class="card-body text-left">
+        <div class="row">
+          <div class="col">
+          <i class="material-symbols-outlined">location_on</i>
+             ${resource.address_1} ${resource.address_2}, ${resource.city}, ${resource.state_province} ${resource.zipcode}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <i class="material-symbols-outlined">call</i>
+            ${resource.site_number}
+          </div>
+          <div class="col">
+            <i class="material-symbols-outlined">mail</i>
+            ${resource.service_email}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <i class="material-symbols-outlined">calendar_month</i>
+            ${resource.site_schedule}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <strong>Eligibility: </strong>
+            ${resource.site_eligibility}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <strong>Details: </strong>
+            ${resource.site_details}
+          </div>
+        </div>
+      </div>
+    </div>`;
 
 }
