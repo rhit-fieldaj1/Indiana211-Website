@@ -11,22 +11,30 @@ document.addEventListener('DOMContentLoaded', async function () {
         localStorage.setItem('radius', 10);
     }
 
-    const radius = localStorage.getItem('radius');
+    setRadius();
     const userCoordinates = await getCoordinates(zipCode);
 
 
-    // Assign variables to links
+    // Assign variables to links and buttons
     const foodPantryLink = document.getElementById('foodPantry');
+    const addButton = document.getElementById('add');
+    const removeButton = document.getElementById('remove');
+    const printButton = document.getElementById('print');
 
     
 
-    // Add listeners to links
-    foodPantryLink.addEventListener('click', () => getResources(foodPantryTax, userCoordinates, radius));
+    // Add listeners to links and buttons
+    foodPantryLink.addEventListener('click', () => getResources(foodPantryTax, userCoordinates));
+    addButton.addEventListener('click', () => addToRadius());
+    removeButton.addEventListener('click', () => subtractFromRadius());
+    printButton.addEventListener('click', () => {window.print()});
 
 });
 
 
-getResources = async function(taxonomy, userCoordinates, radius) {
+getResources = async function(taxonomy, userCoordinates) {
+
+  const radius = localStorage.getItem('radius');
 
     try {
         const response = await fetch(`http://localhost:3030/resources`);
@@ -39,17 +47,23 @@ getResources = async function(taxonomy, userCoordinates, radius) {
         const filteredResources = resources.filter(resource => resource.taxonomy_code === taxonomy);
 
         // Display results
+        document.getElementById('resourceContainer').innerHTML = '';
+
+        if(filteredResources) {
+          document.getElementById('resourceContainer').innerHTML = getLastUpdate(filteredResources);
+        }
+
         filteredResources.forEach(resource => {
-            console.log("Tax Code: ", resource.taxonomy_code);
-            display(resource, userCoordinates, radius);
+            display(resource, userCoordinates);
         });
+
     } catch (error) {
         console.error('Error fetching resources: ', error);
     }
 }
 
-
-getCoordinates = async function (zipCode) {
+// Gets coordinates of the provided zip code
+async function getCoordinates(zipCode) {
     const apiUrl = `https://thezipcodes.com/api/v1/search?zipCode=${zipCode}&countryCode=US&state=Indiana&apiKey=dc99a5a04b7d10ac5b710acd89fd5e5d`;
     try {
         const response = await fetch(apiUrl);
@@ -89,7 +103,9 @@ distance = function (lat1, lon1, lat2, lon2) {
     return distance;
 }
 
-display = function (resource, userCoordinates, radius) {
+display = function (resource, userCoordinates) {
+
+  const radius = localStorage.getItem('radius');
 
     // Convert coordinate strings to numbers
     const lat1 = parseFloat(userCoordinates.latitude);
@@ -151,4 +167,40 @@ display = function (resource, userCoordinates, radius) {
       </div>
     </div>`;
 
+}
+
+
+function setRadius() {
+  const r = document.getElementById('radius');
+  r.innerHTML = localStorage.getItem('radius');
+}
+
+function addToRadius() {
+  const rString = localStorage.getItem('radius');
+  const rNum = parseInt(rString);
+  localStorage.setItem('radius', rNum + 1);
+  setRadius();
+}
+
+function subtractFromRadius() {
+  const rString = localStorage.getItem('radius');
+  const rNum = parseInt(rString);
+
+  // Make sure user isn't setting radius to 0
+  if (rNum > 1) {
+    localStorage.setItem('radius', rNum - 1);
+    setRadius();
+  }
+
+}
+
+
+function getLastUpdate(resources) {
+  for (const r of resources) {
+    if(r.lastVerified) {
+      return `This information was last updated on ${r.lastVerified}`;
+    }
+  }
+
+  return `It is unknown when this data was last verified`;
 }

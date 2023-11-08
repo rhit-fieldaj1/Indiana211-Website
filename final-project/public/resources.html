@@ -22,17 +22,22 @@
 
   <nav class="navbar navbar-expand-md d-flex justify-content-between">
     <div>
-      <div class="d-flex">
-        <a id="menuButton" type="button" class="btn" data-bs-toggle="collapse" data-bs-target="#navigationMenu">
-          <i class="material-symbols-outlined">menu</i>
-        </a>
-        <a id="homeButton" type="button" class="btn" href="home.html">
-          <i class="material-symbols-outlined">home</i>
-        </a>
+      <div class="d-flex container">
+        <div>
+          <a id="menuButton" type="button" class="btn" data-bs-toggle="collapse" data-bs-target="#navigationMenu">
+            <i class="material-symbols-outlined">menu</i>
+          </a>
+          <a id="homeButton" type="button" class="btn" href="home.html">
+            <i class="material-symbols-outlined">home</i>
+          </a>
+        </div>
+
+        <div>
+          <a id="print" type="button" class="btn">
+            <i class="material-symbols-outlined">Print</i><i class="material-symbols-outlined">download</i>
+          </a>
+        </div>
       </div>
-      <!-- <div class="col-6 text-center">
-              <button><img src="images/numbers.png" style="height: 50px; width: 50px;"></button>
-          </div> -->
     </div>
   </nav>
 
@@ -57,8 +62,9 @@
   <!--Resourse header / radius adjuster-->
   <div class="container text-center">
     <h1>Resources within <br>
-      <i class="material-symbols-outlined">remove</i><strong style="font-size: 50px;">10</strong> <i
-        class="material-symbols-outlined">add</i>
+      <button id="remove"><i class="material-symbols-outlined" id="remove">remove</i></button>
+      <strong id="radius" style="font-size: 50px;"></strong>
+      <button id="add"><i class="material-symbols-outlined" id="add">add</i></button>
       <br> miles
     </h1>
   </div>

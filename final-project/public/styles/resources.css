@@ -55,9 +55,6 @@ ul > button {
     align-items: left;
 }
 
-/* #options{
-    text-align: right;
-} */
 #searchBar{
     position: absolute;
     text-align: right;
@@ -119,8 +116,20 @@ nav {
     
 }
 
-/* .card {
-    align-items: start;
-} */
+i {
+    cursor: pointer;
+}
 
 
+#add, #remove {
+    border-radius: 50%;
+    background-color: #FFB351;
+    border-width: 0;
+}
+
+#add, #remove i {
+    color: white;
+}
+  
+
+  
