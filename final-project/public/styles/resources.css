@@ -68,12 +68,7 @@ ul > button {
     top: 13%;
 }
 
-.zip {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 .main-chunk {
     display: flex;
     flex-direction: column;
@@ -122,7 +117,7 @@ i {
 
 
 #add, #remove {
-    border-radius: 50%;
+    border-radius: 40%;
     background-color: #FFB351;
     border-width: 0;
 }
