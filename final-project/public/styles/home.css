@@ -86,7 +86,12 @@ ul > button {
     align-items: center;
 }
 
+.container {
+    margin: 10px;
+}
 
 
-
+.btn-primary {
+    background-color: #005191;
+}
 

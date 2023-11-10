@@ -87,3 +87,7 @@ ul > button {
 h1 {
     margin: 5vh;
 }
+
+.btn-primary {
+    background-color: #005191;
+}
